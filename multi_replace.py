@@ -12,6 +12,9 @@ class multi_replace:
         return self.rx.sub(self.one_dict, text)
 
 class multi_replace_by_whole_words(multi_replace):
+    """
+    To replace multi words by whole words
+    """
     def make_rx(self):
         return re.compile('|'.join(map(self.get_pattern, self.adict)))
     def get_pattern(self, key):
