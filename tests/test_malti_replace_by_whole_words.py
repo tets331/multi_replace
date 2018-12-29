@@ -6,8 +6,10 @@ class test_multi_replace_by_whole_words(TestCase):
         s = 'WORD_STRING_WORDSTRING'
         adict = {
             'WORD':'w',
-            'STRING':'str'
+            'STRING':'str',
+            'OR':'AND'
         }
         ans = 'w_str_WORDSTRING'
         self.assertEqual(mrw(adict)(s), ans)
+        
 
