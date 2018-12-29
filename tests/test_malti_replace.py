@@ -1,7 +1,7 @@
 from unittest import TestCase
-from multi_replace import multi_replace_by_whole_words as mrw
+from multi_replace import multi_replace as mr
 
-class test_multi_replace_by_whole_words(TestCase):
+class test_multi_replace(TestCase):
     def test_upper(self):
         s = 'WORD_STRING_WORDSTRING'
         adict = {
@@ -9,5 +9,5 @@ class test_multi_replace_by_whole_words(TestCase):
             'STRING':'str',
             'OR':'AND'
         }
-        ans = 'w_str_WORDSTRING'
-        self.assertEqual(mrw(adict)(s), ans)
+        ans = 'w_str_wstr'
+        self.assertEqual(mr(adict)(s), ans)
